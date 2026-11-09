@@ -1,0 +1,37 @@
+# Virtual environments
+venv/
+tt-backend/venv/
+.venv/
+env/
+
+# Node dependencies
+node_modules/
+tt/node_modules/
+dist/
+tt/dist/
+.npm/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration & secrets
+.env
+.env.local
+.env.*.local
+*.sqlite3
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db

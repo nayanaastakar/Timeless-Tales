@@ -1,0 +1,7 @@
+target
+.env
+__pycache__/
+*.py[cod]
+.venv/
+django_backend/media/
+django_backend/staticfiles/

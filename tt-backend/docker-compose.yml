@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16
+    ports: ["5434:5432"]
+    environment: { POSTGRES_DB: timeless, POSTGRES_USER: timeless, POSTGRES_PASSWORD: "${DB_PASSWORD}" }
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL","pg_isready -U timeless -d timeless"], interval: 5s, timeout: 5s, retries: 10 }
+  api:
+    image: timeless-tales-django-api:latest
+    build:
+      context: ./django_backend
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: timeless
+      DB_USER: timeless
+      DB_PASSWORD: "${DB_PASSWORD}"
+      JWT_SECRET: "${JWT_SECRET}"
+      DJANGO_SECRET_KEY: "${DJANGO_SECRET_KEY}"
+      DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,api}"
+      CORS_ORIGIN: "${CORS_ORIGIN:-http://localhost:5173,http://localhost:5174,http://localhost:5175,http://127.0.0.1:5174,http://127.0.0.1:5175}"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: ["8080:8080"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/actuator/health', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+  frontend:
+    build:
+      context: ../tt
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:8080
+    depends_on:
+      api:
+        condition: service_healthy
+    ports: ["5175:80"]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+volumes: { pgdata: {} }

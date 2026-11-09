@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory text-ink font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-wine-dark;
+  }
+  :focus-visible {
+    outline: 2px solid #0D9488;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-teal-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-800 disabled:opacity-50 shadow-sm;
+  }
+  .btn-wine {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-wine px-5 py-2.5 text-sm font-medium text-ivory transition hover:bg-wine-dark disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-lg border border-teal-700/30 px-4 py-2 text-sm text-teal-800 hover:bg-teal-50;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-teal-700 px-4 py-2 text-sm font-medium text-teal-800 hover:bg-teal-50 transition-colors;
+  }
+  .input {
+    @apply w-full rounded-lg border border-teal-700/20 bg-white px-3 py-2 text-sm focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
