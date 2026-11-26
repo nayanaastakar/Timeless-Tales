@@ -106,7 +106,7 @@ export default function AdminDashboard() {
         </div>
         <div className="flex items-center gap-2">
           <a
-    href="http://localhost:8080/admin/"
+    href="http://127.0.0.1:8000/admin/"
     target="_blank"
     rel="noreferrer"
     className="btn-outline text-xs px-4 py-2"

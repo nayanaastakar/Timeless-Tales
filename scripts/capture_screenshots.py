@@ -27,22 +27,22 @@ def run():
 
         print("1. Capturing Homepage Storefront...")
         page.goto(f"{BASE_URL}/", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "01_home_storefront.png"))
 
         print("2. Capturing Book Product Detail Page...")
-        page.goto(f"{BASE_URL}/books/the-alchemist-paulo-coelho", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        page.goto(f"{BASE_URL}/books/atomic-habits", wait_until="networkidle", timeout=30000)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "02_book_detail.png"))
 
         print("3. Capturing Catalogue & Filtering Page...")
         page.goto(f"{BASE_URL}/books", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "03_catalogue_search.png"))
 
         print("4. Capturing Today's Deals Page...")
         page.goto(f"{BASE_URL}/deals", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "04_deals_showcase.png"))
 
         print("5. Logging in as Reader to capture Cart, Checkout & Orders...")
@@ -53,33 +53,34 @@ def run():
         page.wait_for_timeout(2000)
 
         # Add book to cart via visible button
-        page.goto(f"{BASE_URL}/books/the-alchemist-paulo-coelho", wait_until="networkidle", timeout=30000)
+        page.goto(f"{BASE_URL}/books/atomic-habits", wait_until="networkidle", timeout=30000)
+        time.sleep(2)
         try:
             add_btn = page.locator('button:has-text("Add to Cart"):visible').first
             if add_btn.is_visible():
                 add_btn.click()
-                page.wait_for_timeout(1000)
+                page.wait_for_timeout(1500)
         except Exception as e:
             print("Cart add notice:", e)
 
         print("6. Capturing Shopping Cart...")
         page.goto(f"{BASE_URL}/cart", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "05_shopping_cart.png"))
 
         print("7. Capturing Checkout Workflow...")
         page.goto(f"{BASE_URL}/checkout", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "06_checkout_workflow.png"))
 
         print("8. Capturing User Orders...")
         page.goto(f"{BASE_URL}/orders", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "07_user_orders.png"))
 
         print("9. Capturing Digital Library...")
         page.goto(f"{BASE_URL}/library", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "08_digital_library.png"))
 
         print("10. Logging in as Admin to capture Admin Analytics...")
@@ -90,7 +91,7 @@ def run():
         page.wait_for_timeout(2000)
 
         page.goto(f"{BASE_URL}/admin-panel", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        time.sleep(3)
         page.screenshot(path=os.path.join(OUT_DIR, "09_admin_dashboard.png"))
 
         # 2. Mobile Responsive Context (iPhone 14)
@@ -102,8 +103,8 @@ def run():
             device_scale_factor=2
         )
         mobile_page = mobile_context.new_page()
-        mobile_page.goto(f"{BASE_URL}/books/the-alchemist-paulo-coelho", wait_until="networkidle", timeout=30000)
-        time.sleep(2)
+        mobile_page.goto(f"{BASE_URL}/books/atomic-habits", wait_until="networkidle", timeout=30000)
+        time.sleep(3)
         mobile_page.screenshot(path=os.path.join(OUT_DIR, "10_mobile_responsive.png"))
 
         browser.close()

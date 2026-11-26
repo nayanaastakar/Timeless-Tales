@@ -226,7 +226,7 @@ python manage.py migrate
 python manage.py seed_bookstore
 
 # Start Django development server
-python manage.py runserver 127.0.0.1:8080
+python manage.py runserver 127.0.0.1:8000
 ```
 
 ### 2. Frontend Setup (React SPA)
@@ -244,8 +244,8 @@ npm run dev -- --host 127.0.0.1 --port 5173
 
 Access the application in your browser:
 - **Storefront Frontend:** [http://localhost:5173/](http://localhost:5173/)
-- **Backend API & Swagger:** [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
-- **Django Admin:** [http://127.0.0.1:8080/admin/](http://127.0.0.1:8080/admin/)
+- **Backend API & Swagger:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+- **Django Admin:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 ### Seed Credentials
 

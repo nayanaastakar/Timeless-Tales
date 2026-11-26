@@ -19,9 +19,9 @@ Compose starts PostgreSQL, applies Django migrations, collects Django Admin stat
 | Service | URL |
 | --- | --- |
 | Frontend | http://localhost:5175 |
-| Django REST API | http://localhost:8080/api/v1/ |
-| API health | http://localhost:8080/actuator/health |
-| Django Admin | http://localhost:8080/admin/ |
+| Django REST API | http://127.0.0.1:8000/api/v1/ |
+| API health | http://127.0.0.1:8000/actuator/health |
+| Django Admin | http://127.0.0.1:8000/admin/ |
 | PostgreSQL (host) | localhost:5434 |
 
 Create an administrator after startup with `docker compose --env-file .env exec api python manage.py createsuperuser`.
@@ -51,7 +51,7 @@ $env:JWT_SECRET = "your-random-secret-at-least-32-bytes-long"
 $env:DJANGO_SECRET_KEY = "your-separate-random-django-secret"
 $env:CORS_ORIGIN = "http://localhost:5174,http://127.0.0.1:5174"
 python manage.py migrate
-python manage.py runserver 127.0.0.1:8080
+python manage.py runserver 127.0.0.1:8000
 ```
 
 Then run the React app:
@@ -59,7 +59,7 @@ Then run the React app:
 ```powershell
 cd D:\Projects\tt
 npm ci
-$env:VITE_API_URL = "http://localhost:8080"
+$env:VITE_API_URL = "http://127.0.0.1:8000"
 npm run dev -- --host 127.0.0.1 --port 5174
 ```
 
