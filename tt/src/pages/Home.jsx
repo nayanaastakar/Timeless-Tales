@@ -183,7 +183,7 @@ export default function Home() {
       </div>
 
       {
-    /* 2. Amazon Value Props Strip */
+    /* 2. Store Value Props Strip */
   }
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 p-3 sm:p-4 rounded-lg bg-white border border-teal-900/10 shadow-sm">
@@ -256,7 +256,7 @@ export default function Home() {
         </section>}
 
       {
-    /* 4. Bestsellers in Books (Horizontal Amazon Carousel) */
+    /* 4. Bestsellers in Books (Horizontal Product Carousel) */
   }
       <section className="mx-auto max-w-7xl px-4">
         <div className="rounded-lg bg-white p-5 border border-wine/10 shadow-sm">

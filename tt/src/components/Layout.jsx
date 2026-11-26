@@ -148,7 +148,7 @@ export default function Layout() {
   };
   return <div className="flex min-h-screen flex-col bg-[#F8F9FA] text-ink font-sans overflow-x-hidden w-full max-w-full">
       {
-    /* Top Persistent Amazon-Style Header */
+    /* Top Persistent Modern Storefront Header */
   }
       <header className="sticky top-0 z-40 bg-[#131921] text-white shadow-md">
         {
@@ -548,7 +548,7 @@ export default function Layout() {
         </div>
 
         {
-    /* ROW 2: Amazon Books Secondary Navigation Bar (Fully Responsive with smooth scrolling) */
+    /* ROW 2: Timeless Tales Secondary Navigation Bar (Fully Responsive with smooth scrolling) */
   }
         <div className="relative bg-[#232F3E] text-white text-xs border-t border-zinc-700/80 shadow-inner">
           <div className="mx-auto max-w-7xl relative flex items-center">
@@ -827,7 +827,7 @@ export default function Layout() {
       </main>
 
       {
-    /* Amazon-Style Structured Footer */
+    /* Modern Storefront Structured Footer */
   }
       <footer className="mt-12 bg-[#232F3E] text-white">
         {
@@ -916,7 +916,7 @@ export default function Layout() {
         <div className="bg-[#131A22] py-4 text-center text-[11px] text-zinc-500 border-t border-zinc-800">
           <p>© 2026 Timeless Tales Private Limited. All rights reserved.</p>
           <p className="mt-1 text-[10px] text-zinc-600">
-            Inspired by Amazon Books architecture. Built with Django REST Framework, PostgreSQL, and React.
+            Inspired by Timeless Tales architecture. Built with Django REST Framework, PostgreSQL, and React.
           </p>
         </div>
       </footer>

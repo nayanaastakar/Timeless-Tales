@@ -1,4 +1,4 @@
-# Timeless Tales — Amazon-Style Online Bookstore
+# Timeless Tales
 
 [![Django](https://img.shields.io/badge/Backend-Django_5.1_REST_Framework-0C4B33?logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![React](https://img.shields.io/badge/Frontend-React_19_JavaScript-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
@@ -6,7 +6,7 @@
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL_16-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Playwright](https://img.shields.io/badge/Verification-Playwright_E2E-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/)
 
-**Timeless Tales** is a commercial-grade online bookstore inspired by **Amazon Books / Amazon.in Books**, featuring an original brand identity, search-first product discovery, multi-edition book management, live customer reviews, guest & authenticated shopping carts, 4-step checkout, digital reading library, and back-office administrative analytics.
+**Timeless Tales** is a full-featured commercial-grade online bookstore featuring an original brand identity, search-first product discovery, multi-edition book management, live customer reviews, guest & authenticated shopping carts, 4-step checkout, digital reading library, and back-office administrative analytics.
 
 ---
 
@@ -32,7 +32,7 @@ Timeless Tales couples a high-performance **Django REST Framework** backend with
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                 React 19 SPA (Vite + JSX)                   │
-│   • Persistent Multi-Row Amazon Header with Autocomplete    │
+│   • Persistent Multi-Row E-Commerce Header with Autocomplete    │
 │   • Category Mega-Menu & Interactive Horizontal Carousels   │
 │   • Multi-Format Book Detail with Real-Time Savings Engine  │
 │   • Guest Cart (localStorage) & Auto-Sync on Authentication │
@@ -57,7 +57,7 @@ Timeless Tales couples a high-performance **Django REST Framework** backend with
 
 ## Key Features & Capabilities
 
-### 1. Amazon-Style Storefront & Navigation
+### 1. Modern Storefront & Navigation
 - **Persistent Multi-Level Header**: Delivery pincode selector, category-filtered live search bar with backend autocomplete suggestions, Account & Lists dropdown, Returns & Orders, and dynamic cart badge.
 - **Interactive Secondary Navigation Bar**: Responsive category carousel with automated left/right navigation chevrons and smooth scroll physics.
 - **Comprehensive Mega Menu**: Database-driven category drawer encompassing 10+ major book departments and subcategories (Fiction, Technology, Competitive Exams, Regional & Kannada Literature, Children's, Business, etc.).
@@ -76,7 +76,7 @@ Timeless Tales couples a high-performance **Django REST Framework** backend with
 ### 4. Shopping Workflows & Account Experience
 - **Guest Cart with Seamless Account Sync**: Unauthenticated visitors can add books to their cart; upon signing in or registering, all guest cart items are automatically migrated to their server cart.
 - **Instant Buy Now Flow**: Clicking *Buy Now* as a guest automatically routes to `/login?redirect=/checkout` with an informative notice; upon sign-in, the user lands directly in the checkout workflow.
-- **4-Step Amazon Checkout**: Address selection / creation, Delivery speed preference, Payment Method (Card, UPI, Net Banking, COD), and Order Summary with coupon code application.
+- **4-Step Secure Checkout**: Address selection / creation, Delivery speed preference, Payment Method (Card, UPI, Net Banking, COD), and Order Summary with coupon code application.
 - **Order Lifecycle & Returns**: Order history with status badges (Pending, Processing, Shipped, Delivered), PDF invoice generation, and customer return request filing.
 - **Digital Library**: Personal library dashboard with reading status tracking (Unread, Reading, Finished) and authorized excerpt reader.
 
