@@ -55,7 +55,7 @@ class SupportTicketListCreateView(APIView):
         serializer = SupportTicketSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         ticket = SupportTicket.objects.create(
-            user=request.user if request.user.is_authenticated else None,
+            user=request.user if (request.user and request.user.is_authenticated) else None,
             name=serializer.validated_data["name"],
             email=serializer.validated_data["email"],
             subject=serializer.validated_data["subject"],

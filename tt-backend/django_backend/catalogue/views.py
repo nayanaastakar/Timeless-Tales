@@ -313,7 +313,7 @@ class RecentlyViewedView(views.APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        if request.user.is_authenticated:
+        if request.user and request.user.is_authenticated:
             views_qs = RecentlyViewed.objects.filter(user=request.user).select_related("book")[:12]
         else:
             session_key = request.session.session_key or ""
@@ -332,7 +332,7 @@ class RecentlyViewedView(views.APIView):
         except Book.DoesNotExist:
             return Response({"error": "Book not found"}, status=status.HTTP_404_NOT_FOUND)
 
-        if request.user.is_authenticated:
+        if request.user and request.user.is_authenticated:
             RecentlyViewed.objects.update_or_create(
                 user=request.user,
                 book=book,
