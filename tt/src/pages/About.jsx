@@ -1,9 +1,7 @@
-import { Link } from 'react-router-dom'
-import { BookOpen, ShieldCheck, Heart, Award, Users } from 'lucide-react'
-
+import { Link } from "react-router-dom";
+import { BookOpen, ShieldCheck, Award } from "lucide-react";
 export default function About() {
-  return (
-    <div className="mx-auto max-w-4xl px-4 py-8 space-y-12">
+  return <div className="mx-auto max-w-4xl px-4 py-8 space-y-12">
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <span className="text-xs font-bold uppercase tracking-widest text-wine">Our Story & Mission</span>
         <h1 className="font-serif text-3xl sm:text-5xl font-bold text-zinc-900">
@@ -57,6 +55,5 @@ export default function About() {
           </Link>
         </div>
       </div>
-    </div>
-  )
+    </div>;
 }

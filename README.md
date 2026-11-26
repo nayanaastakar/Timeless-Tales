@@ -1,7 +1,7 @@
 # Timeless Tales — Amazon-Style Online Bookstore
 
 [![Django](https://img.shields.io/badge/Backend-Django_5.1_REST_Framework-0C4B33?logo=django&logoColor=white)](https://www.djangoproject.com/)
-[![React](https://img.shields.io/badge/Frontend-React_19_TypeScript-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
+[![React](https://img.shields.io/badge/Frontend-React_19_JavaScript-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Styling-Tailwind_CSS_v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL_16-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Playwright](https://img.shields.io/badge/Verification-Playwright_E2E-2EAD33?logo=playwright&logoColor=white)](https://playwright.dev/)
@@ -27,11 +27,11 @@
 
 ## Architectural Overview
 
-Timeless Tales couples a high-performance **Django REST Framework** backend with a modern **React 19 + TypeScript** Single Page Application:
+Timeless Tales couples a high-performance **Django REST Framework** backend with a modern **React 19 + JavaScript (JSX)** Single Page Application:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                 React 19 SPA (Vite + TS)                    │
+│                 React 19 SPA (Vite + JSX)                   │
 │   • Persistent Multi-Row Amazon Header with Autocomplete    │
 │   • Category Mega-Menu & Interactive Horizontal Carousels   │
 │   • Multi-Format Book Detail with Real-Time Savings Engine  │
@@ -135,14 +135,14 @@ timeless-tales/
 │   └── images/                    # Verified high-resolution screenshots
 ├── scripts/
 │   └── capture_screenshots.py     # Playwright automation script for E2E capture
-├── tt/                            # Frontend Application (React 19 + TypeScript)
+├── tt/                            # Frontend Application (React 19 + JavaScript JSX)
 │   ├── src/
 │   │   ├── components/            # Layout, Header, BookCard, BookCover, MegaMenu
 │   │   ├── pages/                 # Home, Catalogue, BookDetail, Cart, Checkout, etc.
 │   │   ├── lib/                   # API client (Axios/Fetch), Global Store (Context)
-│   │   └── App.tsx                # Client-side router configuration
+│   │   └── App.jsx                # Client-side router configuration
 │   ├── package.json
-│   └── vite.config.ts
+│   └── vite.config.js
 ├── tt-backend/                    # Backend Application (Django REST Framework)
 │   ├── django_backend/
 │   │   ├── config/                # Django settings, root URLs, handlers
@@ -162,7 +162,7 @@ timeless-tales/
 
 | Layer | Technologies |
 |:---|:---|
-| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS v4, Lucide Icons, React Router DOM v7 |
+| **Frontend** | React 19, JavaScript (ES6+ / JSX), Vite, Tailwind CSS v4, Lucide Icons, React Router DOM v7 |
 | **Backend** | Python 3.11+, Django 5.1, Django REST Framework, SimpleJWT Authentication |
 | **Database** | PostgreSQL 16 (Full-Text Search, JSONB fields, relational constraints) |
 | **Testing & Automation** | Django TestCase (`python manage.py test`), Playwright Python |
@@ -275,7 +275,7 @@ Ran 16 tests in 4.388s
 OK
 ```
 
-Run the frontend TypeScript verification and production build:
+Run the frontend production build:
 
 ```powershell
 cd "tt"
