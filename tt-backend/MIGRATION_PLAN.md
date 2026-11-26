@@ -2,7 +2,7 @@
 
 ## Current state
 
-- The customer application is React 18, TypeScript, Vite, Tailwind, and React Router.
+- The customer application is React 19, JavaScript (JSX), Vite, Tailwind, and React Router.
 - The active Compose API is Django REST Framework and PostgreSQL. The former Spring Boot/Java API is no longer in the runtime path.
 - The catalogue has 12 public-domain demo titles. Pricing, ratings, stock, and review scores are store demo data, not verified market data.
 - The existing PostgreSQL volume and Spring/Flyway tables are retained. The Django data migration copies source rows into Django-owned tables and normalizes legacy BCrypt hashes for Django verification.

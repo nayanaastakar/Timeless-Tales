@@ -1,6 +1,6 @@
 # Timeless Tales
 
-Timeless Tales is a React 18 / TypeScript bookstore frontend backed by Django REST Framework and PostgreSQL. The backend migration keeps the existing PostgreSQL volume and copies legacy book and account data into Django-owned tables; it does not rewrite or drop the original Spring/Flyway tables.
+Timeless Tales is a modern React 19 / JavaScript (JSX) bookstore frontend backed by Django REST Framework and PostgreSQL.
 
 ## Run the full stack
 
